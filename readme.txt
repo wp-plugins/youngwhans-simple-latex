@@ -1,9 +1,11 @@
 === Youngwhan's Simple Latex ===
 Contributors: Youngwhan Song
+Donate link: N/A
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 1.5
 Tested up to: 2.8.6
 Stable tag: 1.0
+
 
 Using mathtex based on latex (tex live) and divpng, it makes to enable to present latex formula on your post.
 
@@ -15,12 +17,15 @@ In order to use this plugin, you don't need to install prerequisite software lik
 
 = Shared Server =
 Here is some shared servers
+
 * http://www.forkosh.dreamhost.com/mathtex.cgi (the default location)
 * http://www.openmaths.org/cgi-bin/mathtex.cgi 
 * http://www.quantnet.com/cgi-bin/mathtex.cgi
 
-= Your own mathtex.cgi ==
+= Your own mathtex.cgi =
+
 If you want to have your own mathtex.cgi, please, look at
+
 * To install latex and divpng, look at http://www.tug.org/texlive/quickinstall.html
 * To install mathtex.cgi, look at http://www.forkosh.dreamhost.com/source_mathtex.html#install
 
