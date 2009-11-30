@@ -47,6 +47,9 @@ blog.breadncup.com/yw-latex/
 
 == Frequently Asked Questions ==
 
+= How to use this plug-in? =
+- Simply, put your latex syntax wrapping [math] in your post. For example, [math]x^2+y^2[/math].
+
 = How do I know my server supports latex? =
 - Type "which latex" in a shell command in your server. If it shows the location, it may support the latex.
 
