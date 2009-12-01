@@ -4,7 +4,7 @@ Donate link: N/A
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 1.5
 Tested up to: 2.8.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 Using mathtex based on latex (tex live) and divpng, it makes to enable to present latex formula on your post.
 
@@ -40,9 +40,6 @@ To do a new installation of the plugin, please follow these steps
 4. Activate the plugin through the 'Plugins' menu in WordPress.
 5. Optionally, go to the Options page (YW Latex), and choose the location of mathtex.cgi
 
-- Youngwhan Song
-- http://blog.breadncup.com/yw-latex/
-
 == Frequently Asked Questions ==
 
 = How to use this plug-in? =
@@ -66,5 +63,10 @@ To do a new installation of the plugin, please follow these steps
 
 == Changelog ==
 
+= 1.0.2 =
+
+* Modified small readme.txt
+
 = 1.0 =
+
 * Created the first version of latex plugin for wordpress.
