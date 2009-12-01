@@ -4,14 +4,13 @@ Donate link: N/A
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 1.5
 Tested up to: 2.8.6
-Stable tag: 1.0
-
+Stable tag: 1.0.1
 
 Using mathtex based on latex (tex live) and divpng, it makes to enable to present latex formula on your post.
 
 == Description ==
 
-This plugin enables put latex formula in wordpress post by using mathtex.cgi running top of latex with divpng.
+This plugin enables to put latex formula in wordpress post by using mathtex.cgi running top of latex with divpng.
 
 In order to use this plugin, you don't need to install prerequisite software like latex, dvipng, or mathtex.cgi. However, if you don't install the softwares on your own local server, it will use shared host server for mathtex.cgi, which will give a little bit of low performance and a burden to the host server as well.
 
