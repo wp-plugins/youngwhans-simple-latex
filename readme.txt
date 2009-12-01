@@ -40,9 +40,8 @@ To do a new installation of the plugin, please follow these steps
 4. Activate the plugin through the 'Plugins' menu in WordPress.
 5. Optionally, go to the Options page (YW Latex), and choose the location of mathtex.cgi
 
-Youngwhan Song
-breadncup@gmail.com
-blog.breadncup.com/yw-latex/
+- Youngwhan Song
+- http://blog.breadncup.com/yw-latex/
 
 == Frequently Asked Questions ==
 
