@@ -3,7 +3,7 @@
 Plugin Name: Youngwhan's Simple Latex
 Plugin URI: http://blog.breadncup.com/yw-latex-wp-plugin/
 Description: Present Latex PNG image with [math] LATEX CONTEXT [/math].
-Version: 1.0.3
+Version: 1.1.0
 Author: Youngwhan Song
 Author URI: http://blog.breadncup.com/
 
@@ -35,9 +35,18 @@ class YW_LATEX {
 	function yw_init() {
 		add_shortcode('math', array(&$this, 'yw_get_math'));
 	}
-	function yw_get_math($atts, $syntax ) {
-		$mathtexurl = get_option('yw_latex_mathtex');
-		$yw_url='<img src="'.$mathtexurl.'?'.$syntax.'" align="middle" border="0px" />';
+	function yw_get_math($atts, $syntax, $shortcode ) {
+		extract(shortcode_atts(array(
+														 'pre' => '0',
+														 ), $atts));
+		if (!$pre) {
+			$mathtexurl = get_option('yw_latex_mathtex');
+			$yw_url='<img src="'.$mathtexurl.'?'.$syntax.'" align="middle" border="0px" />';
+		} else if ($pre=='1') {
+			$yw_url="[".$shortcode."]".$syntax."[/".$shortcode."]";
+		} else {
+			$yw_url=$syntax;
+		}
 		return $yw_url;
 	}
 }
@@ -47,11 +56,9 @@ if (is_admin()) {
 	require(dirname( __FILE__ ).'/yw-latex-admin.php');
 	$yw_latex = new YW_LATEX_ADMIN;
 	add_action( 'init', array(&$yw_latex,'yw_admin_init'));
-	/* register_activation_hook( __FILE__, array( &$wp_latex, 'activation_hook' ) ); */
 } else {
 	$yw_latex = new YW_LATEX;
 	add_action( 'init', array(&$yw_latex,'yw_init'));
 }
-/* $yw_latex = new YW_LATEX; */
 
 ?>

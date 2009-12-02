@@ -4,9 +4,9 @@ Donate link: N/A
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 2.5
 Tested up to: 2.8.6
-Stable tag: 1.0.3
+Stable tag: 1.1.0
 
-It enables to put latex formula in wordpress post.
+It enables to put latex formula in wordpress post. Usage: [math]{Latex Syntax}[/math].
 
 == Description ==
 
@@ -18,6 +18,11 @@ It enables to put latex formula in wordpress post. It actually uses mathtex.cgi 
 
 = Do I need to install latex or mathtex.cgi in my server? =
 - No. It is not necessary. By default, it is good enough to just install this plugin.
+
+= Option =
+* When you use simply [math]{Latex Syntax}[/math], or [math pre="0"]{Latex Syntax}[/math], your post will show latex formula.
+* When you use [math pre="1"]{Latex Syntax}[/math], it will show the code like [math]{Latex Syntax}[/math]. It is useful when you wrap it with &lt;pre&gt; tag.
+* When you use [math pre="2"]{Latex Syntax}[/math], it will show the code itself without [math] and [/math] code.
 
 = More information =
 
@@ -66,6 +71,10 @@ To do a new installation of the plugin, please follow these steps
 4. Option to specify mathtex.cgi location.
 
 == Changelog ==
+
+= 1.1.0 =
+
+* Added "pre" option
 
 = 1.0.3 =
 
