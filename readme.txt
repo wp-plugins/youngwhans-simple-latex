@@ -2,33 +2,45 @@
 Contributors: Youngwhan Song
 Donate link: N/A
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
-Requires at least: 1.5
+Requires at least: 2.5
 Tested up to: 2.8.6
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 
-Using mathtex based on latex (tex live) and divpng, it makes to enable to present latex formula on your post.
+It enables to put latex formula in wordpress post. Usage: [math]{Latex Syntax}[/math].
 
 == Description ==
 
-This plugin enables to put latex formula in wordpress post by using mathtex.cgi running top of latex with divpng.
+It enables to put latex formula in wordpress post. It actually uses mathtex.cgi running top of latex with divpng.
 
-In order to use this plugin, you don't need to install prerequisite software like latex, dvipng, or mathtex.cgi. However, if you don't install the softwares on your own local server, it will use shared host server for mathtex.cgi, which will give a little bit of low performance and a burden to the host server as well.
+= How does it work? =
+- Simply, put your latex syntax wrapping [math] in your post.
+- For example, [math]x^2+y^2[/math].
 
-= Shared Server =
-Here is some shared servers
+= Do I need to install latex or mathtex.cgi in my server? =
+- No. It is not necessary. By default, it is good enough to just install this plugin.
+
+= Option =
+* When you use simply [math]{Latex Syntax}[/math], or [math pre="0"]{Latex Syntax}[/math], your post will show latex formula.
+* When you use [math pre="1"]{Latex Syntax}[/math], it will show the code like [math]{Latex Syntax}[/math]. It is useful when you wrap it with &lt;pre&gt; tag.
+* When you use [math pre="2"]{Latex Syntax}[/math], it will show the code itself without [math] and [/math] code.
+
+= More information =
+
+This plugin depends on mathtex.cgi which is provided by <a href="http://www.forkosh.com/" title="John Forkosh" target=_blank>John Forkosh</a>. By default option, it uses http://www.forkosh.dreamhost.com/mathtex.cgi. It means while rendering your latex syntax, it accesses to the shared host to get the correct formula image. Some people does not want to do that.
+
+Here is an option to use your own mathtex.cgi.
+<ol>
+	<li><a title="Installing Latex" href="http://blog.breadncup.com/2009/11/27/latex-install/">Install latex and dvipng</a></li>
+	<li><a title="Installing mathtex.cgi" href="http://blog.breadncup.com/2009/11/27/installing-mathtex-cgi/">Get and Compile mathtex.cgi</a></li>
+</ol>
+
+Once you get the latex(+dvipng) and mathtex.cgi, copy mathtex.cgi into a directory, and specify where the mathtex.cgi is. Generally, it can be located in cgi-bin. For example, http://yourdomain.com/cgi-bin. In this case, you need to specify the location in YW Latex Option page as "/cgi-bin/mathtex.cgi"
+
+If you insist to use the shared host, you have an option to select one of shared hosts like below:
 
 * http://www.forkosh.dreamhost.com/mathtex.cgi (the default location)
 * http://www.openmaths.org/cgi-bin/mathtex.cgi 
 * http://www.quantnet.com/cgi-bin/mathtex.cgi
-
-= Your own mathtex.cgi =
-
-If you want to have your own mathtex.cgi, please, look at
-
-* To install latex and divpng, look at http://www.tug.org/texlive/quickinstall.html
-* To install mathtex.cgi, look at http://www.forkosh.dreamhost.com/source_mathtex.html#install
-
-Anyhow, what it needs is mathtex.cgi for this plugin.
 
 == Installation ==
 
@@ -42,26 +54,31 @@ To do a new installation of the plugin, please follow these steps
 
 == Frequently Asked Questions ==
 
-= How to use this plug-in? =
+= What is latex? =
+- Refer to http://en.wikipedia.org/wiki/LaTeX
+
+= How do I know latex syntax? =
+- Refer to http://en.wikipedia.org/wiki/Math_markup
+
+= What is usage of this plugin? =
 - Simply, put your latex syntax wrapping [math] in your post. For example, [math]x^2+y^2[/math].
-
-= How do I know my server supports latex? =
-- Type "which latex" in a shell command in your server. If it shows the location, it may support the latex.
-
-= How do I know my server supports divpng? =
-- Type "which divpng" in a shell command in your server. If it shows the location, it may support the latex.
-
-= What is latex syntax? =
-- You can refer to http://en.wikipedia.org/wiki/Math_markup
 
 == Screenshots ==
 
-1. Type latex syntax
-2. Show in the post
-3. Option menu in the dashboard panel
-4. Option to specify mathtex.cgi
+1. Putting latex syntax in your post.
+2. Actual showing in your blog.
+3. Option menu in Administrator Panel
+4. Option to specify mathtex.cgi location.
 
 == Changelog ==
+
+= 1.1.0 =
+
+* Added "pre" option
+
+= 1.0.3 =
+
+* Updated readme.txt
 
 = 1.0.2 =
 
