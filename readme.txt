@@ -3,8 +3,8 @@ Contributors: Youngwhan Song
 Donate link: N/A
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 2.5
-Tested up to: 2.8.6
-Stable tag: 1.1.0
+Tested up to: 2.9
+Stable tag: 1.1.1
 
 It enables to put latex formula in wordpress post. Usage: [math]{Latex Syntax}[/math].
 
