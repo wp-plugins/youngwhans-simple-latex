@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Youngwhan's Simple Latex
-Plugin URI: http://blog.breadncup.com/yw-latex-wp-plugin/
-Description: Present Latex PNG image with [math] LATEX CONTEXT [/math].
-Version: 1.1.1
-Author: Youngwhan Song
-Author URI: http://blog.breadncup.com/
+  Plugin Name: Youngwhan's Simple Latex
+  Plugin URI: http://blog.breadncup.com/yw-latex-wp-plugin/
+  Description: Present Latex PNG image with [math] LATEX CONTEXT [/math].
+  Version: 1.3.0
+  Author: Youngwhan Song
+  Author URI: http://blog.breadncup.com/
 
-Copyright: Youngwhan Song
-License: GPL2+
+  Copyright: Youngwhan Song
+  License: GPL2+
 */
 /*  Copyright 2009 Youngwhan Song  (email : breadncup@gmail.com)
 
@@ -32,33 +32,42 @@ if ( !defined('ABSPATH') ) exit;
 add_option('yw_latex_mathtex', 'http://www.forkosh.dreamhost.com/mathtex.cgi');
 
 class YW_LATEX {
-	function yw_init() {
-		add_shortcode('math', array(&$this, 'yw_get_math'));
-	}
-	function yw_get_math($atts, $syntax, $shortcode ) {
-		extract(shortcode_atts(array(
-														 'pre' => '0',
-														 ), $atts));
-		if (!$pre) {
-			$mathtexurl = get_option('yw_latex_mathtex');
-			$yw_url='<img src="'.$mathtexurl.'?'.$syntax.'" align="middle" border="0px" />';
-		} else if ($pre=='1') {
-			$yw_url="[".$shortcode."]".$syntax."[/".$shortcode."]";
-		} else {
-			$yw_url=$syntax;
-		}
-		return $yw_url;
-	}
+    function yw_init() {
+        add_shortcode('math', array(&$this, 'yw_get_math'));
+    }
+
+    function yw_init_comment_shortcodes() {
+        remove_all_shortcodes();
+        $this->yw_init();
+        add_filter('comment_text', 'do_shortcode');
+    }
+
+    function yw_get_math($atts, $syntax, $shortcode ) {
+        extract(shortcode_atts(array(
+                                   'pre' => '0',
+                                   'align' => 'top',
+                                   ), $atts));
+        if (!$pre) {
+            $mathtexurl = get_option('yw_latex_mathtex');
+            $yw_url='<img src="'.$mathtexurl.'?'.$syntax.'" style="float:'.$align.';" border="0px" />';
+        } else if ($pre=='1') {
+            $yw_url="[".$shortcode."]".$syntax."[/".$shortcode."]";
+        } else {
+            $yw_url=$syntax;
+        }
+        return $yw_url;
+    }
 }
 
 /* Main */
 if (is_admin()) {
-	require(dirname( __FILE__ ).'/yw-latex-admin.php');
-	$yw_latex = new YW_LATEX_ADMIN;
-	add_action( 'init', array(&$yw_latex,'yw_admin_init'));
+    require(dirname( __FILE__ ).'/yw-latex-admin.php');
+    $yw_latex = new YW_LATEX_ADMIN;
+    add_action( 'init', array(&$yw_latex,'yw_admin_init'));
 } else {
-	$yw_latex = new YW_LATEX;
-	add_action( 'init', array(&$yw_latex,'yw_init'));
+    $yw_latex = new YW_LATEX;
+    add_action( 'init', array(&$yw_latex,'yw_init'));
+    add_filter('comments_template', array(&$yw_latex,'yw_init_comment_shortcodes'));
 }
 
 ?>
