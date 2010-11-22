@@ -6,14 +6,14 @@ Requires at least: 2.5
 Tested up to: 3.0.1
 Stable tag: 1.3.0
 
-It enables to put latex formula in wordpress post. Usage: [math]{Latex Syntax}[/math].
+It enables to put latex formula in wordpress post or comment. Usage: [math]{Latex Syntax}[/math].
 
 == Description ==
 
-It enables to put latex formula in wordpress post. It actually uses mathtex.cgi running top of latex with divpng.
+It enables to put latex formula in wordpress post or comment. It actually uses mathtex.cgi running top of latex with divpng.
 
 = How does it work? =
-- Simply, put your latex syntax wrapping [math] in your post.
+- Simply, put your latex syntax wrapping [math] in your post or comment.
 - For example, [math]x^2+y^2[/math].
 
 = Do I need to install latex or mathtex.cgi in my server? =
@@ -77,6 +77,14 @@ To do a new installation of the plugin, please follow these steps
 4. Option to specify mathtex.cgi location.
 
 == Changelog ==
+
+= 1.3.0 =
+
+* Added a feature to enable to write latex in comment.
+
+= 1.2.1 =
+
+* Fix a bug in 1.2.0 printing 'n', which was typo.
 
 = 1.2.0 =
 
