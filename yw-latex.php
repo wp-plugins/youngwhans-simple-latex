@@ -1,4 +1,4 @@
-n<?php
+<?php
 /*
   Plugin Name: Youngwhan's Simple Latex
   Plugin URI: http://blog.breadncup.com/yw-latex-wp-plugin/
