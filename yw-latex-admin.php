@@ -19,12 +19,12 @@
 if ( !defined('ABSPATH') ) exit;
 
 class YW_LATEX_ADMIN extends YW_LATEX {
-	function yw_admin_init() {
-		parent::yw_init();
-		add_action('admin_menu', array(&$this,'yw_admin_option'));
-	}
-	function yw_admin_option() {
-		add_options_page('Youngwhan\'s Simple Latex Plugin Options', 'YW Latex', 10, dirname( __FILE__ ).'/yw-latex-options.php');
-	}
+    function yw_admin_init() {
+        parent::yw_init();
+        add_action('admin_menu', array(&$this,'yw_admin_option'));
+    }
+    function yw_admin_option() {
+        add_options_page('Youngwhan\'s Simple Latex Plugin Options', 'YW Latex', 10, dirname( __FILE__ ).'/yw-latex-options.php');
+    }
 }
 ?>
