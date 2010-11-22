@@ -3,8 +3,8 @@ Contributors: Youngwhan Song
 Donate link: N/A
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 2.5
-Tested up to: 2.9
-Stable tag: 1.1.1
+Tested up to: 3.0.1
+Stable tag: 1.2.1
 
 It enables to put latex formula in wordpress post. Usage: [math]{Latex Syntax}[/math].
 
@@ -19,10 +19,16 @@ It enables to put latex formula in wordpress post. It actually uses mathtex.cgi 
 = Do I need to install latex or mathtex.cgi in my server? =
 - No. It is not necessary. By default, it is good enough to just install this plugin.
 
-= Option =
+= Option (pre) =
 * When you use simply [math]{Latex Syntax}[/math], or [math pre="0"]{Latex Syntax}[/math], your post will show latex formula.
 * When you use [math pre="1"]{Latex Syntax}[/math], it will show the code like [math]{Latex Syntax}[/math]. It is useful when you wrap it with &lt;pre&gt; tag.
 * When you use [math pre="2"]{Latex Syntax}[/math], it will show the code itself without [math] and [/math] code.
+
+= Option (align) =
+* Default align option is "top"
+* Possible align options are: "top", "bottom", "middle", "left", and "right".
+* These options are equivalent to <img style="float:[OPTION]" />, so it's useful if you want to align latex image with wrapping text.
+* For example, [math align="left"]x^2+y^2[/math] will put the latex form at left with the wrapping text.
 
 = More information =
 
@@ -71,6 +77,10 @@ To do a new installation of the plugin, please follow these steps
 4. Option to specify mathtex.cgi location.
 
 == Changelog ==
+
+= 1.2.0 =
+
+* Added "align" option in "[math]" tag.
 
 = 1.1.0 =
 
