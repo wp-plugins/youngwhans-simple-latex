@@ -29,7 +29,7 @@
 
 if ( !defined('ABSPATH') ) exit;
 
-add_option('yw_latex_mathtex', 'http://www.forkosh.dreamhost.com/mathtex.cgi');
+add_option('yw_latex_mathtex', 'http://www.forkosh.com/mathtex.cgi');
 
 class YW_LATEX {
     function yw_init() {

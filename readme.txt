@@ -1,10 +1,10 @@
 === Youngwhan's Simple Latex ===
 Contributors: Youngwhan Song
-Donate link: N/A
+Donate link: http://blog.breadncup.com/donation/
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 2.5
 Tested up to: 3.0.1
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 
 It enables to put latex formula in wordpress post or comment. Usage: [math]{Latex Syntax}[/math].
 
@@ -32,7 +32,7 @@ It enables to put latex formula in wordpress post or comment. It actually uses m
 
 = More information =
 
-This plugin depends on mathtex.cgi which is provided by <a href="http://www.forkosh.com/" title="John Forkosh" target=_blank>John Forkosh</a>. By default option, it uses http://www.forkosh.dreamhost.com/mathtex.cgi. It means while rendering your latex syntax, it accesses to the shared host to get the correct formula image. Some people does not want to do that.
+This plugin depends on mathtex.cgi which is provided by <a href="http://www.forkosh.com/" title="John Forkosh" target=_blank>John Forkosh</a>. By default option, it uses http://www.forkosh.com/mathtex.cgi. It means while rendering your latex syntax, it accesses to the shared host to get the correct formula image. Some people does not want to do that.
 
 Here is an option to use your own mathtex.cgi.
 <ol>
@@ -44,7 +44,7 @@ Once you get the latex(+dvipng) and mathtex.cgi, copy mathtex.cgi into a directo
 
 If you insist to use the shared host, you have an option to select one of shared hosts like below:
 
-* http://www.forkosh.dreamhost.com/mathtex.cgi (the default location)
+* http://www.forkosh.com/mathtex.cgi (the default location)
 * http://www.openmaths.org/cgi-bin/mathtex.cgi 
 * http://www.quantnet.com/cgi-bin/mathtex.cgi
 
@@ -77,6 +77,10 @@ To do a new installation of the plugin, please follow these steps
 4. Option to specify mathtex.cgi location.
 
 == Changelog ==
+
+= 1.4.0 =
+
+* Added more description of change log in 1.3.0 readme.
 
 = 1.3.0 =
 
