@@ -80,7 +80,7 @@ To do a new installation of the plugin, please follow these steps
 
 = 1.4.0 =
 
-* Added more description of change log in 1.3.0 readme.
+* Updated Forkosh's cgi location since it has changed.
 
 = 1.3.0 =
 
