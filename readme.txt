@@ -78,6 +78,10 @@ To do a new installation of the plugin, please follow these steps
 
 == Changelog ==
 
+= 1.4.0 =
+
+* Added more description of change log in 1.3.0 readme.
+
 = 1.3.0 =
 
 * Added a feature to enable to write latex in comment.
