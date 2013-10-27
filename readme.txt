@@ -80,11 +80,19 @@ To do a new installation of the plugin, please follow these steps
 
 == Upgrade Notice ==
 
+= 1.4.1 =
+
+* Minor updated for readme.txt to follow wordpress readme.txt format
+
 = 1.4.0 =
 * Keep the version and updated readme.txt for the standard format
 * Updated Forkosh's cgi location since it has changed.
 
 == Changelog ==
+
+= 1.4.1 =
+
+* Minor updated for readme.txt to follow wordpress readme.txt format
 
 = 1.4.0 =
 
