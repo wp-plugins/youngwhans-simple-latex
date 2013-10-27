@@ -4,7 +4,7 @@ Donate link: http://blog.breadncup.com/donation/
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 2.5
 Tested up to: 3.2.1
-Stable tag: 1.4.0
+Stable Tag: 1.4.0
 
 It enables to put latex formula in wordpress post or comment. Usage: [math]{Latex Syntax}[/math].
 
