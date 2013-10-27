@@ -80,6 +80,10 @@ To do a new installation of the plugin, please follow these steps
 
 == Upgrade Notice ==
 
+= 1.5.2 =
+
+* Minor fix again for the rendering it in comment.
+
 = 1.5.1 =
 
 * Minor updated that it needs to reserve whitespaces in other options.
@@ -101,6 +105,10 @@ To do a new installation of the plugin, please follow these steps
 * Updated Forkosh's cgi location since it has changed.
 
 == Changelog ==
+
+= 1.5.2 =
+
+* Minor fix again for the rendering it in comment.
 
 = 1.5.1 =
 
