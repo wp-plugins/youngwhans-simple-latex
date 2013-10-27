@@ -3,7 +3,7 @@
   Plugin Name: Youngwhan's Simple Latex
   Plugin URI: http://blog.breadncup.com/yw-latex-wp-plugin/
   Description: Present Latex PNG image with [math] LATEX CONTEXT [/math].
-  Version: 1.3.0
+  Version: 1.5.2
   Author: Youngwhan Song
   Author URI: http://blog.breadncup.com/
 
@@ -33,7 +33,29 @@ add_option('yw_latex_mathtex', 'http://www.forkosh.com/mathtex.cgi');
 
 class YW_LATEX {
     function yw_init() {
+#        remove_filter( 'the_content', 'wpautop' );
+        add_filter( 'the_content', array(&$this, 'yw_pre_process_shortcode') , 7);
+#        add_filter( 'the_content', 'wpautop' , 12);
         add_shortcode('math', array(&$this, 'yw_get_math'));
+    }
+
+    // Reference: http://wpforce.com/prevent-wpautop-filter-shortcode/
+    function yw_pre_process_shortcode($content) {
+        global $shortcode_tags;
+
+        // Backup current registered shortcodes and clear them all out
+        $orig_shortcode_tags = $shortcode_tags;
+        $shortcode_tags = array();
+
+        add_shortcode('math', array(&$this, 'yw_get_math'));
+
+        // Do the shortcode (only the one above is registered)
+        $content = do_shortcode($content);
+
+        // Put the original shortcodes back
+        $shortcode_tags = $orig_shortcode_tags;
+
+        return $content;
     }
 
     function yw_init_comment_shortcodes() {
@@ -49,6 +71,7 @@ class YW_LATEX {
                                    ), $atts));
         if (!$pre) {
             $mathtexurl = get_option('yw_latex_mathtex');
+            $syntax = preg_replace('/\s/', '', $syntax);
             $yw_url='<img src="'.$mathtexurl.'?'.$syntax.'" style="float:'.$align.';" border="0px" />';
         } else if ($pre=='1') {
             $yw_url="[".$shortcode."]".$syntax."[/".$shortcode."]";
