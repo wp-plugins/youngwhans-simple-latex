@@ -4,7 +4,7 @@ Donate link: http://blog.breadncup.com/donation/
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 2.5
 Tested up to: 3.7
-Stable Tag: 1.5.1
+Stable Tag: 1.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
