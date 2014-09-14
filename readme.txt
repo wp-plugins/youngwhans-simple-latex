@@ -3,8 +3,8 @@ Contributors: Youngwhan Song
 Donate link: http://blog.breadncup.com/donation/
 Tags: latex, math, mathematic, equation, mathtex, forkosh, john, mimetex
 Requires at least: 2.5
-Tested up to: 3.8
-Stable Tag: 1.5.3
+Tested up to: 4.0
+Stable Tag: 1.5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,10 @@ To do a new installation of the plugin, please follow these steps
 4. Option to specify mathtex.cgi location.
 
 == Upgrade Notice ==
+
+= 1.5.4 =
+
+* Bump version 5o 1.5.4 for Wordpress 4.0 compatible check
 
 = 1.5.3 =
 
