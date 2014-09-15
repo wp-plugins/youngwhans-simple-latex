@@ -3,7 +3,7 @@
   Plugin Name: Youngwhan's Simple Latex
   Plugin URI: http://blog.breadncup.com/yw-latex-wp-plugin/
   Description: Present Latex PNG image with [math] LATEX CONTEXT [/math].
-  Version: 1.5.3
+  Version: 1.5.4
   Author: Youngwhan Song
   Author URI: http://blog.breadncup.com/
 
